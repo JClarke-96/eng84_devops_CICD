@@ -24,4 +24,5 @@ Continuous Deployment (CD) is a software release process that uses automated tes
 - Atlassian Bamboo
 - Travis CI
 
-# Test
+# CI
+## Jenkins
