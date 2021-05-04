@@ -33,9 +33,5 @@ sudo echo "server {
     }
 }" | sudo tee /etc/nginx/sites-available/default
 
-# remove the old file and add our one
-sudo rm /etc/nginx/sites-available/default
-sudo cp /home/ubuntu/environment/nginx.default /etc/nginx/sites-available/default
-
 # finally, restart the nginx service so the new config takes hold
 sudo service nginx restart
