@@ -20,6 +20,19 @@ sudo npm install pm2 -g
 
 sudo apt-get install nginx -y
 
+sudo echo "server {
+    listen 80;
+    server_name _;
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade \$http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host \$host;
+        proxy_cache_bypass \$http_upgrade;
+    }
+}" | sudo tee /etc/nginx/sites-available/default
+
 # remove the old file and add our one
 sudo rm /etc/nginx/sites-available/default
 sudo cp /home/ubuntu/environment/nginx.default /etc/nginx/sites-available/default
