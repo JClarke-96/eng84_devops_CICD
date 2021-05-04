@@ -31,7 +31,7 @@ Continuous Deployment (CD) is a software release process that uses automated tes
 - Restrict where project can run | Label Expression `sparta-ubuntu-node`
 - Git Repositiories | Repository URL `git@github.com:JClarke-96/eng84_devops_CICD.git`
 - Git Repositories | Credentials `jordan-key`
-- Git Branches to build | Branch Specifier `*/main`
+- Git Branches to build | Branch Specifier `*/dev`
 - Build Triggers | GitHub hook trigger for GITScm polling
 - Provide Node & npm bin/ folder to PATH | NodeJS Installation `Sparta-Node-JS`
 - Build
